@@ -1,0 +1,142 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    border: none !important;
+    outline: none !important;
+    /*overflow-x: hidden;*/
+    /*overflow-y: hidden;*/
+    background: url("/assets/images/temp-home-background.png") center/cover no-repeat;
+}
+
+
+
+/******************************************************************************/
+/*                                  HOME                                      */
+/******************************************************************************/
+/* TODO : Adapting the home for small window */
+
+
+#home {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 100vh;
+}
+#home.ingame {
+    display: none;
+}
+
+/******************************************************************************/
+
+/* TODO : Beautifying the title */
+#home-game-title {
+    grid-column: 1;
+
+    text-align: center;
+    color: rgb(247, 190, 98);
+    /* font-family: "Calibri Light", sans-serif; */
+    font-family: "Brush Script MT", cursive;
+    font-weight: bolder;
+    font-size: 550%;
+}
+
+/******************************************************************************/
+
+#home-menu {
+    grid-column: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    gap: 40px;
+}
+
+.home-menu-button {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 150px;
+
+	box-shadow: 4px 4px 2px 0px #276873;
+	background-color:#599bb3;
+	border-radius:28px;
+	border:1px solid #29668f;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Courier New;
+	font-size:17px;
+	font-weight:bold;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 2px 0px #3d768a;
+}
+.home-menu-button:hover {
+	background-color:#408c99;
+}
+.home-menu-button:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+/******************************************************************************/
+/*                                  GAME                                      */
+/******************************************************************************/
+
+#game {
+    display: none;
+}
+#game.ingame {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: none !important;
+    outline: none !important;
+}
+
+
+
+/******************************************************************************/
+/*                                 FOOTER                                     */
+/******************************************************************************/
+/* TODO : Making the footer more dynamic */
+
+footer {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    margin: 0 20px 0 20px;
+    background-color: rgb(30, 48, 69);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+footer.ingame {
+    display: none;
+}
+
+.footer-item {
+    color: white;
+    font-family: "Calibri Light", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer .footer-item:first-child {
+    text-align: left;
+}
+footer .footer-item:nth-child(2) {
+    text-align: center;
+}
+footer .footer-item:last-child {
+    text-align: right;
+}
